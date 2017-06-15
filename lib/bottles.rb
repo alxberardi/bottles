@@ -47,7 +47,7 @@ class Bottles
     end
 
     def to_s
-      "#{available_bottles} of beer on the wall, #{available_bottles} of beer.\n"\
+      "#{available_bottles.capitalize} of beer on the wall, #{available_bottles} of beer.\n"\
       "#{action}, #{remaining_bottles} of beer on the wall.\n"
     end
 
@@ -101,6 +101,26 @@ class Bottles
 
     def remaining_bottles
       'no more bottles'
+    end
+  end
+
+  class Verse0 < Verse
+    def self.for?(number)
+      number == 0
+    end
+
+    private
+
+    def available_bottles
+      'no more bottles'
+    end
+
+    def action
+      'Go to the store and buy some more'
+    end
+
+    def remaining_bottles
+      '99 bottles'
     end
   end
 end
