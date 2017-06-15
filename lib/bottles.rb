@@ -6,6 +6,10 @@ class Bottles
     Verses[number].to_s
   end
 
+  def verses(from, to)
+    [from, to].map { |number| verse(number).to_s }.join("\n")
+  end
+
   class Verses
     include Singleton
 
