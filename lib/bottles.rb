@@ -83,4 +83,24 @@ class Bottles
       '1 bottle'
     end
   end
+
+  class Verse1 < Verse
+    def self.for?(number)
+      number == 1
+    end
+
+    private
+
+    def available_bottles
+      '1 bottle'
+    end
+
+    def action
+      'Take it down and pass it around'
+    end
+
+    def remaining_bottles
+      'no more bottles'
+    end
+  end
 end
