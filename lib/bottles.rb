@@ -7,7 +7,7 @@ class Bottles
   end
 
   def verses(from, to)
-    [from, to].map { |number| verse(number).to_s }.join("\n")
+    from.downto(to).map { |number| verse(number).to_s }.join("\n")
   end
 
   class Verses
