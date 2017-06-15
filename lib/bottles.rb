@@ -10,6 +10,10 @@ class Bottles
     from.downto(to).map { |number| verse(number).to_s }.join("\n")
   end
 
+  def song
+    verses(99,0)
+  end
+
   class Verses
     include Singleton
 
